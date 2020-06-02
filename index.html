@@ -13,14 +13,18 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-light bg-light">
+      <nav class="navbar navbar-dark bg-dark">
+        <!-- Button placed to access high scores. -->
         <div>
-          <a class="btn btn-primary" href="#" role="button">View High Scores</a>
+          <a class="btn btn-primary" href="high-scores.html" role="button"
+            >View The Ultimate High Scores</a
+          >
         </div>
-        <div id="quiz-time">Time:</div>
+        <!-- Time being tracked during quiz. -->
+        <div id="quiz-time"><p class="text-danger">Time:</p></div>
       </nav>
     </header>
-
+    <!-- Welcome headline User will see. -->
     <div class="container mt-5" id="start-quiz">
       <div class="row">
         <div class="col-md">
@@ -32,8 +36,9 @@
               wrong answer.
             </p>
           </div>
+          <!-- Button to start the quiz. -->
           <div class="text-center" id="quiz-start-button">
-            <button type="button" class="btn btn-info">
+            <button type="button" class="btn btn-danger">
               Start Quiz
             </button>
           </div>
