@@ -45,7 +45,37 @@ function renderQuestionChoices() {
   }
   quizOver();
 }
-// a way to replace previous question, with new question without needing to create a new html for each question
-// see if the use selected the right answer
-// timer needs to be set
+// This will allow for a new question to populate without needing to create a new html file for each question.
+function clearQuestionDiv() {
+  console.log("About to clear HTML");
+  document.getElementById("question-choices").innerHTML = "";
+  quizOver();
+}
+// This will see if the user selected the right answer
+function checkAnswer(question, answer) {
+  console.log("question: ", question);
+  console.log("answer: ", answer);
+  let correctAnswer = questions[question].answer;
+  let userAnswer = questions[question].choices[answer];
+  if (userAnswer == correctAnswer) {
+    index = index + 1;
+    console.log(score);
+    console.log("Correct");
+  }
+  // This will allow code to continue even if wrong answer is selcted along with taking away time.
+  else {
+    index = index + 1;
+    countDown = countDown - 15;
+    score = score - 15;
+    console.log(index);
+    console.log("Next question: ", index);
+    console.log("Incorrect");
+  }
+  clearQuestionDiv();
+  renderQuestions();
+  quizOver();
+}
+// This sets up the timer to start countiing down from 75 seconds.
+function setTime() {}
+
 // store initial and high scores without deleting them automatically.

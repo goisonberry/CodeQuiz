@@ -62,5 +62,28 @@
         </div>
       </div>
     </div>
+    <!-- This section displays AFTER code has finished with questions. User inputs initials and sees their score -->
+    <div class="container d-none" id="all-done">
+      <div class="row">
+        <div class="col-md">
+          <h1 class="text-center" id="all-done-text">All Done!</h1>
+          <h2 class="text-center">
+            Your final score is:
+            <p id="final-score"></p>
+          </h2>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div>
+          <p>Enter initials:</p>
+          <input type="text" id="initial-input" />
+          <a href="high-scores.html">
+            <button class="btn btn-danger" id="initials-button">
+              Submit
+            </button></a
+          >
+        </div>
+      </div>
+    </div>
   </body>
 </html>
