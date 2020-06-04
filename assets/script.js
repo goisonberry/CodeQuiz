@@ -76,6 +76,22 @@ function checkAnswer(question, answer) {
   quizOver();
 }
 // This sets up the timer to start countiing down from 75 seconds.
-function setTime() {}
-
+function setTime() {
+  document.getElementById("quiz-time").innerHTML = countDown + "sec left";
+  countDown--;
+  if (countDown == -1) {
+    clearInterval(quizTime);
+  }
+  quizOver();
+}
+// This will check to see if the conditions are occuring correctly within each function.
+function quizOver() {
+  if (index >= 4 || countDown <= 0) {
+    document.getElementById("quiz-questions").classList.add("d-none");
+    document.getElementById("all-done").classList.remove("d-none");
+    document.getElementById("quiz-time").innerHTML = countDown + "sec left";
+    document.getElementById("final-score").innerHTML = countDown;
+    clearInterval(quizTime);
+  }
+}
 // store initial and high scores without deleting them automatically.
