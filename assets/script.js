@@ -24,10 +24,27 @@ function renderQuestions() {
     document.getElementById("question").innerHTML = questions[index].title;
     renderQuestions();
   }
-  quizOver;
+  quizOver();
 }
 // This will populate the choices that relate to the question being asked
-
+function renderQuestionChoices() {
+  var question = questions[index].choices;
+  console.log(question);
+  for (var option = 0; option < question.length; option++) {
+    var questionOptionsDiv = document.getElementById("question-choices");
+    var questionButtons = document.createElement("button");
+    questionButtons.className =
+      "btn btn-outline-primary btn-lg d-flex justify-content-around";
+    questionButtons.innerHTML = question[option];
+    // This occurs when user selects a choice.
+    questionButtons.setAttribute(
+      "onclick",
+      "checkAnswer(" + index + "," + option + ");"
+    );
+    questionOptionsDiv.append(questionButtons);
+  }
+  quizOver();
+}
 // a way to replace previous question, with new question without needing to create a new html for each question
 // see if the use selected the right answer
 // timer needs to be set
