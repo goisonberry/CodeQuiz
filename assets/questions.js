@@ -1,33 +1,27 @@
 var questions = [
   {
-    title: "What tag tells the brower the code is written in HTML?",
-    choices: ["<!DOCtypeHTML>", "<title>", "<html>", "<header>", "<h1>"],
-    answer: "<html>",
+    title: "How would you save a Javascript file as?",
+    choices: [".html", ".css", ".js", ".jquery"],
+    answer: ".js",
   },
   {
-    title: "How would you comment in Javescript?",
-    choices: ["<!-- -->", "/*====*/", "$()", "//", "None of the above"],
-    answer: "//",
+    title: "What tag would be used to type Javascript within your html file?",
+    choices: ["script", "style", "html", "span"],
+    answer: "script",
   },
   {
-    title: "In Javascript, which of the following accepts a boolean?",
-    choices: ["confirm", "prompt", "alerts", "document", "class"],
-    answer: "confirm",
+    title: "What is jquery's syntax?",
+    choices: ["!DOCTYPE", ".value", "$()", "None of the above"],
+    answer: "$()",
   },
   {
-    title: "What is the purpose of console.log?",
-    choices: [
-      "tell you stuff",
-      "close a function",
-      "send you and email",
-      "debug",
-      "store information",
-    ],
-    answer: "debug",
+    title: "What would you use to set a global variable?",
+    choices: ["let", "var", "set", "get"],
+    answer: "var",
   },
   {
-    title: "What file type does JQuery assist you with?",
-    choices: ["html", "css", "pdf", "javascript", "All of the above"],
-    answer: "javascript",
+    title: "What prevents event bubbling from occuring in your code?",
+    choices: ["stopBubbling", "stopPropagation", "stop", "console.log"],
+    answer: "stopPropagation",
   },
 ];
