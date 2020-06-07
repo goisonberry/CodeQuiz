@@ -86,7 +86,7 @@ function setTime() {
 }
 // This will check to see if the conditions are occuring correctly within each function.
 function quizOver() {
-  if (index >= 4 || countDown <= 0) {
+  if (index >= 5 || countDown <= 0) {
     document.getElementById("quiz-questions").classList.add("d-none");
     document.getElementById("all-done").classList.remove("d-none");
     document.getElementById("quiz-time").innerHTML = countDown + "sec left";
